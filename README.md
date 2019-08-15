@@ -1,4 +1,4 @@
-# @bbq-beets/fib-tools
+# fib-tools
 
 ![](https://github.com/bbq-beets/fib-tools/workflows/CI/badge.svg)
 

@@ -1,0 +1,22 @@
+{
+  "name": "@pied-piper-inc/fib-tools",
+  "version": "0.1.4",
+  "description": "Functions for working with the Fibonacci sequence",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --ci --color --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pied-piper-inc/fib-tools.git"
+  },
+  "author": "Jeremy Epling <jeremyepling@github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pied-piper-inc/fib-tools/issues"
+  },
+  "homepage": "https://github.com/pied-piper-inc/fib-tools#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}

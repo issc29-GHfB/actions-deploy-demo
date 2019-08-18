@@ -53,18 +53,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
-          version: 12
+          node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@octodemov2'
-      - name: Update package version
-        run: |
-          git config user.name "Actions User"
-          git config user.email noreply@github.com
-          #npm version 1.0.$(date +%s)
-          #npm config set //npm.pkg.github.com/:_authToken ${GPR_TOKEN}
       - run: npm publish
-        env: 
-          NODE_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

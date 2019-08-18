@@ -18,5 +18,9 @@
   "homepage": "https://github.com/octodemov2/actions-deploy-demo#readme",
   "devDependencies": {
     "jest": "^24.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
+
 }

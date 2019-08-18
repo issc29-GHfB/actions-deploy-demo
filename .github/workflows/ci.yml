@@ -9,24 +9,24 @@ on:
       - master
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        os:
+#  build:
+#    strategy:
+#      matrix:
+#        os:
 ##          - macOS-latest
-          - ubuntu-latest
+#          - ubuntu-latest
 #          - windows-latest
-        node-version:
+#        node-version:
 #          - 8
 #          - 10
-          - 12
-    runs-on: ${{matrix.os}}
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
-        with:
-          version: ${{matrix.node-version}}
-      - run: npm install
+#          - 12
+#    runs-on: ${{matrix.os}}
+#    steps:
+#      - uses: actions/checkout@master
+#      - uses: actions/setup-node@master
+#        with:
+#          version: ${{matrix.node-version}}
+#      - run: npm install
       # - run: npm ci
       # - run: npm test
 
@@ -60,7 +60,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@bryancross'
       - run: echo foo >> foo.txt
-      - run: npm config set //npm.pkg.github.com/:_authToken ${secrets.GPR_TOKEN}
+      - run: npm config set //npm.pkg.github.com/:_authToken ${{secrets.GPR_TOKEN}}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}

@@ -1,5 +1,5 @@
 {
-  "name": "@octodemov2/fib-tools",
+  "name": "@octodemov2/actions-deploy-demo",
   "version": "1.0.1566157215",
   "description": "Functions for working with the Fibonacci sequence",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/octodemov2/fib-tools.git"
+    "url": "git://github.com/octodemov2/actions-deploy-demo.git"
   },
-  "author": "Jeremy Epling <jeremyepling@github.com>",
+  "author": "Bryan Cross <bryancross@github.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/octodemov2/fib-tools/issues"
+    "url": "https://github.com/octodemov2/actions-deploy-demo/issues"
   },
-  "homepage": "https://github.com/octodemov2/fib-tools#readme",
+  "homepage": "https://github.com/octodemov2/actions-deploy-demo#readme",
   "devDependencies": {
     "jest": "^24.8.0"
   }

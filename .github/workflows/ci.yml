@@ -13,12 +13,12 @@ jobs:
     strategy:
       matrix:
         os:
-          - macOS-latest
+#          - macOS-latest
           - ubuntu-latest
-          - windows-latest
+#          - windows-latest
         node-version:
-          - 8
-          - 10
+#          - 8
+#          - 10
           - 12
     runs-on: ${{matrix.os}}
     steps:
@@ -56,12 +56,11 @@ jobs:
         with:
           version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@pied-piper-inc'
+          scope: '@octodemov2'
       - name: Update package version
         run: |
           git config user.name "Actions User"
           git config user.email noreply@github.com
           npm version 1.0.$(date +%s)
+          npm config set //npm.pkg.github.com/:_authToken ${secrets.GPR_TOKEN}
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}

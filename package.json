@@ -1,6 +1,6 @@
 {
   "name": "@octodemov2/fib-tools",
-  "version": "0.1.4",
+  "version": "1.0.1566157215",
   "description": "Functions for working with the Fibonacci sequence",
   "main": "index.js",
   "scripts": {

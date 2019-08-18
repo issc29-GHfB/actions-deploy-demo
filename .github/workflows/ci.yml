@@ -59,6 +59,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@bryancross'
+      - run: echo foo >> foo.txt
       - run: npm config set //npm.pkg.github.com/:_authToken ${NODE_AUTH_TOKEN}
       - run: npm publish
         env:

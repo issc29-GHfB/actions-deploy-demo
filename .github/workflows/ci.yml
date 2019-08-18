@@ -45,7 +45,7 @@ jobs:
           npm version 1.0.$(date +%s)
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
   publish-github-package-registry:
     needs: build
@@ -64,4 +64,4 @@ jobs:
           npm version 1.0.$(date +%s)
           npm config set //npm.pkg.github.com/:_authToken ${GPR_TOKEN}
       - run: npm publish
-        env: GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
+        env: GPR_TOKEN: ${{secrets.GPR_TOKEN}}

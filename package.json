@@ -1,5 +1,5 @@
 {
-  "name": "@bidnessforb/fib-tools",
+  "name": "@octodemov2/fib-tools",
   "version": "0.1.4",
   "description": "Functions for working with the Fibonacci sequence",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bidnessforb/fib-tools.git"
+    "url": "git://github.com/octodemov2/fib-tools.git"
   },
   "author": "Jeremy Epling <jeremyepling@github.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bidnessforb/fib-tools/issues"
+    "url": "https://github.com/octodemov2/fib-tools/issues"
   },
-  "homepage": "https://github.com/bidnessforb/fib-tools#readme",
+  "homepage": "https://github.com/octodemov2/fib-tools#readme",
   "devDependencies": {
     "jest": "^24.8.0"
   }

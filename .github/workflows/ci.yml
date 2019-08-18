@@ -64,4 +64,4 @@ jobs:
           npm version 1.0.$(date +%s)
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{github.token}}
+          NODE_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}

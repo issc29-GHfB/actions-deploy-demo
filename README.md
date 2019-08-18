@@ -4,6 +4,8 @@
 
 This module provides helper functions for the Fibonacci sequence.
 
+Run!
+
 ## Get the nth Number
 
 ```javascript

@@ -1,6 +1,6 @@
 {
   "name": "@octodemov2/actions-deploy-demo",
-  "version": "1.0.1566166742",
+  "version": "1.0.1566166805",
   "description": "Functions for working with the Fibonacci sequence",
   "main": "index.js",
   "scripts": {

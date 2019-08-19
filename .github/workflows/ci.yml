@@ -30,13 +30,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Publish to NPM
     steps:
-      
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           version: 12
           registry-url: https://registry.npmjs.org/
-      - name: Config Git and Push to NPM
       - run: |
            git config user.name "Actions User"
            git config user.email noreply@github.com
@@ -56,7 +54,6 @@ jobs:
           version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@bryancross'
-      - name: Publish to GPR
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

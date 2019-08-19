@@ -60,6 +60,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           #scope: '@shikhathakkar'
           #scope: '@octodemov2'
+       - name: Update GPR
        - run: | 
              git config user.name "Actions User"
              git config user.email noreply@github.com

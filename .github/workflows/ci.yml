@@ -39,7 +39,7 @@ jobs:
            echo $GITHUB_ACTOR
            git config user.name $GITHUB_ACTOR
            git config user.email noreply@github.com
-           git config user.password ${secrets.GITHUB_TOKEN}
+           git config user.password ${{secrets.GITHUB_TOKEN}}
            npm version 1.0.$(date +%s)
            cat package.json
            git commit -am 'Version updated'

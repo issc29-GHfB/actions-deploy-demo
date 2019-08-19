@@ -39,6 +39,7 @@ jobs:
            git config user.name "Actions User"
            git config user.email noreply@github.com
            npm version 1.0.$(date +%s)
+           cat package.json
            git commit -am 'Version updated'
            npm publish
         env:

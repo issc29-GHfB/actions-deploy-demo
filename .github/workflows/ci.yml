@@ -1,4 +1,4 @@
-name: CI
+name: Node.js Package
 
 on:
   pull_request:
@@ -9,48 +9,23 @@ on:
       - master
 
 jobs:
-#  build:
-#    strategy:
-#      matrix:
-#        os:
-##          - macOS-latest
-#          - ubuntu-latest
-#          - windows-latest
-#        node-version:
-#          - 8
-#          - 10
-#          - 12
-#    runs-on: ${{matrix.os}}
-#    steps:
-#      - uses: actions/checkout@master
-#      - uses: actions/setup-node@master
-#        with:
-#          version: ${{matrix.node-version}}
-#      - run: npm install
-      # - run: npm ci
-      # - run: npm test
+  
 
   publish-npm:
-    # needs: build
+   # needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
           version: 12
           registry-url: https://registry.npmjs.org/
-          #scope: '@octodemov2'
-      - name: Update package version
-        run: |
-          git config user.name "Actions User"
-          git config user.email noreply@github.com
-          npm version 1.0.$(date +%s)
       - run: npm publish
         env:
-         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
-    # needs: build
+   # needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -58,13 +33,7 @@ jobs:
         with:
           version: 12
           registry-url: https://npm.pkg.github.com/
-          #scope: '@shikhathakkar'
-          #scope: '@octodemov2'
-       - name: Update GPR
-       - run: | 
-             git config user.name "Actions User"
-             git config user.email noreply@github.com
-             npm version 1.0.$(date +%s)
-             npm publish
+          scope: '@bryancross'
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

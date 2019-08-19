@@ -39,7 +39,7 @@ jobs:
         with:
           version: 12
           registry-url: https://registry.npmjs.org/
-          scope: '@octodemov2'
+          #scope: '@octodemov2'
       - name: Update package version
         run: |
           git config user.name "Actions User"

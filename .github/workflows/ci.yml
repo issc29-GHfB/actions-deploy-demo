@@ -55,6 +55,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
-      - uses: bidnesssforb/demo-gpr-publish
+      - uses: bidnesssforb/demo-gpr-publish@master
         env:
           GPR_TOKEN: ${{secrets.GPR_TOKEN}}

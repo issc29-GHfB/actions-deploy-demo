@@ -55,7 +55,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@octodemov2'
       - run: | 
-        cat package.json
-        npm publish
+          cat package.json
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

@@ -60,8 +60,10 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           #scope: '@shikhathakkar'
           #scope: '@octodemov2'
-      - run: npm version 1.0.$(date +%s)
-      - run: npm publish
-
+       - run: | 
+             git config user.name "Actions User"
+             git config user.email noreply@github.com
+             npm version 1.0.$(date +%s)
+             npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

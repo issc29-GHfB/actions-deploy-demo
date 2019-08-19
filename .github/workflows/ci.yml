@@ -47,7 +47,7 @@ jobs:
           npm version 1.0.$(date +%s)
       - run: npm publish
         env:
-         NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
     # needs: build
@@ -59,7 +59,7 @@ jobs:
           version: 12
           registry-url: https://npm.pkg.github.com/
           #scope: '@shikhathakkar'
-          scope: '@octodemov2'
+          #scope: '@octodemov2'
       - run: npm publish
 
         env:

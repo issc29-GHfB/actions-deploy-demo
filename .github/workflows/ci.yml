@@ -60,6 +60,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           #scope: '@shikhathakkar'
           #scope: '@octodemov2'
+      - run: npm version 1.0.$(date +%s)
       - run: npm publish
 
         env:

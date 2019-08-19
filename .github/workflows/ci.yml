@@ -49,17 +49,17 @@ jobs:
   #      env:
   #        NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
-  publish-github-package-registry:
-    #needs: build
+  publish-gpr:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@bryancross'
-      - run: npm config set //npm.pkg.github.com/:_authToken ${{secrets.GPR_TOKEN}}
+          #scope: '@shikhathakkar'
+          scope: '@octodemov2'
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

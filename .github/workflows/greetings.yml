@@ -1,6 +1,6 @@
 name: Greetings
 
-on: *
+on: [issues]
 
 jobs:
   greeting:

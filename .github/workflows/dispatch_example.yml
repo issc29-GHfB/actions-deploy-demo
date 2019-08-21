@@ -1,0 +1,21 @@
+name: Node.js Package
+
+on:
+  repository_dispatch:
+
+jobs:
+
+  examine-webhook-paylod:
+    runs-on: ubuntu-latest
+    name: Webhook Payload
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: |
+           echo $GITHUB_ACTOR
+           cat ${GITHUB_EVENT_PATH}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

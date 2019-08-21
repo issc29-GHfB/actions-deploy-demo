@@ -1,16 +1,14 @@
 name: Node.js Package
 
 on:
-  pull_request:
-    branches:
-      - master
-  push:
-    branches:
-      - master
+  #pull_request:
+  #  branches:
+  #    - master
+  #push:
+  #  branches:
+  #    - master
   repository_dispatch:
 
-
-env: NEW_VERSION
 jobs:
 #  build:
 #    runs-on: ubuntu-16.04

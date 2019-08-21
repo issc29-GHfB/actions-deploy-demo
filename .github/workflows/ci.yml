@@ -33,7 +33,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
-      - name: Publish package to NPM
         with:
           version: 12
           registry-url: https://registry.npmjs.org/
@@ -52,7 +51,6 @@ jobs:
   publish-gpr:
   #  needs: build
     runs-on: ubuntu-latest
-    name: Publish to GPR
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1

@@ -1,6 +1,6 @@
 name: Fire on Everything
 
-on: [*]
+on: [repository]
   
 
 jobs:

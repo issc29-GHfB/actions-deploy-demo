@@ -2,9 +2,9 @@
 a
 ![](https://github.com/bbq-beets/fib-tools/workflows/CI/badge.svg)
 
-This module provides helper functions for the Fibonacci sequence.
+asdflkj
 
-Trigger CI
+Make the magic happen
 
 ## Get the nth Number
 

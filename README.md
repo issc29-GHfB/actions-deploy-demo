@@ -4,7 +4,7 @@ a
 
 This module provides helper functions for the Fibonacci sequence.
 
-Trigger CI
+Make the magic happen
 
 ## Get the nth Number
 

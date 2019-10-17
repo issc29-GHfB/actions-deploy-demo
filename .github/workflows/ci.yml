@@ -9,6 +9,8 @@ on:
       - master
     paths-ignore:
       - 'docs/**'
+    paths:
+      - 'service-1/**'
   repository_dispatch:
 
 jobs:

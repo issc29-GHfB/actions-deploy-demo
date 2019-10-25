@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Build and package 
 
 on:
   pull_request:
@@ -11,21 +11,25 @@ on:
       - 'docs/**'
     #paths:
     #  - 'service-1/**'
+#  schedule:
+#    - cron: '5 4 * 2 2' 
   repository_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Build with Node ${{ matrix.node_version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: [ '10', '8' ]
-    name: Node ${{ matrix.node }} Sample
+        node_version: [ '10', '8' ]
+        os: [ubuntu-latest, windows-latest]
+
     steps:
       - uses: actions/checkout@master
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          version: ${{ matrix.node }}
+          node_version: ${{ matrix.node }}
       - run: npm install
       - run: npm build --if-present
       - run: npm test

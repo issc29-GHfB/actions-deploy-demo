@@ -45,14 +45,14 @@ jobs:
         with:
           version: 12
           registry-url: https://registry.npmjs.org/
-      - run: |
+      - env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: |
            git config user.name $GITHUB_ACTOR
            git config user.email noreply@github.com
            #npm version 1.0.$(date +%s)
            npm publish
-      - env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
+      
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest

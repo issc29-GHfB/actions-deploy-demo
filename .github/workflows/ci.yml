@@ -45,6 +45,7 @@ jobs:
         with:
           version: 12
           registry-url: https://registry.npmjs.org/
+          scope: '@issc29-org'
       - env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |

@@ -50,7 +50,7 @@ jobs:
            git config user.email noreply@github.com
            #npm version 1.0.$(date +%s)
            npm publish
-        env:
+      - env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
@@ -62,8 +62,10 @@ jobs:
         with:
           version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@octodemov2'
-      - run: | 
-          npm publish
-        env:
+          scope: '@issc29-GHfB'
+      - env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: | 
+          npm publish
+          
+        

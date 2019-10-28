@@ -45,7 +45,7 @@ jobs:
         with:
           version: 12
           registry-url: https://registry.npmjs.org/
-          scope: '@issc29-org'
+          scope: issc29-org
       - env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
@@ -63,7 +63,7 @@ jobs:
         with:
           version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@issc29-GHfB'
+          scope: issc29-GHfB
       - env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: | 

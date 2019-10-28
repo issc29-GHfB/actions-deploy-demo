@@ -1,5 +1,5 @@
 {
-  "name": "actions-deploy-demo",
+  "name": "@issc29-org/actions-deploy-demo",
   "version": "1.0.51",
   "description": "Functions for working with the Fibonacci sequence",
   "main": "index.js",

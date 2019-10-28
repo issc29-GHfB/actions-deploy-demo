@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Setup node
-        uses: issc29/setup-node
+        uses: issc29/setup-node@master
         with:
           node_version: ${{ matrix.node }}
       - run: npm install
@@ -41,7 +41,7 @@ jobs:
     name: Publish to NPM
     steps:
       - uses: actions/checkout@v1
-      - uses: issc29/setup-node
+      - uses: issc29/setup-node@master
         with:
           version: 12
           registry-url: https://registry.npmjs.org/
@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: issc29/setup-node
+      - uses: issc29/setup-node@master
         with:
           version: 12
           registry-url: https://npm.pkg.github.com/

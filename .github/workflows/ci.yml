@@ -63,8 +63,8 @@ jobs:
       - uses: issc29/setup-node@master
         with:
           version: 12
-          registry-url: https://npm.pkg.github.com/
-          scope: issc29-GHfB
+          registry-url: https://npm.pkg.github.com/issc29-GHfB
+          scope: issc29-org
       - run: cat $NPM_CONFIG_USERCONFIG
       - env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

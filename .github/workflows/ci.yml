@@ -46,6 +46,7 @@ jobs:
           version: 12
           registry-url: https://registry.npmjs.org/
           scope: issc29-org
+      - run: cat $NPM_CONFIG_USERCONFIG
       - env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
@@ -64,6 +65,7 @@ jobs:
           version: 12
           registry-url: https://npm.pkg.github.com/
           scope: issc29-GHfB
+      - run: cat $NPM_CONFIG_USERCONFIG
       - env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: | 

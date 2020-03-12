@@ -1,8 +1,4 @@
 # fib-tools
-a
-![](https://github.com/bbq-beets/fib-tools/workflows/CI/badge.svg)
-
-asdflkj
 
 Make the magic happen
 

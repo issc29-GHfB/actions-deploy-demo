@@ -4,7 +4,7 @@
 
 [![Build Status](https://dev.azure.com/issc29/actions-deploy-demo/_apis/build/status/issc29-GHfB.actions-deploy-demo?branchName=master)](https://dev.azure.com/issc29/actions-deploy-demo/_build/latest?definitionId=2&branchName=master)
 
-Make the magic happen
+Make the magic happen now!
 
 ## Get the nth Number
 
